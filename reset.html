@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>重置按钮</title>
+</head>
+<body>
+<form action="save.php" method="post" >
+<input id="resetinput" type = "text"/>
+    <label>爱好:</label>
+    <select>
+      <option value="看书">看书</option>
+      <option value="旅游" selected="selected">旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物">购物</option>
+    </select>
+    <input type="submit" value="确定"  />
+    <input type="reset" value="chongzhi"  />
+    <script>
+    	var input = document.getElementById("resetinput");
+    	input.addEventListener('change',function(e) {
+    		console.log("changed!\n");
+    	});
+    	input.addEventListener('input',function(e) {
+    		console.log("input!\n");
+    	});
+    </script>
+</form>
+
+</body>
+</html>

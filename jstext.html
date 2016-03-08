@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="test.css">
+        <style>
+            p{width: 200px;margin-bottom: 10px;}
+                    .user{float: left; color: #fff;}
+            /*.p1{
+                width: 100px;
+                height: 100px;
+                padding: 30px;
+                background: blue;
+            }
+
+            .s1{
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                background: green;
+            }
+            .s11{
+                 width: 20px;
+                height: 20px;
+                padding: 5px;
+                background: yellow;
+            }*/
+        </style>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<div>
+    <h3><a href=""> 现在可以了</a></h3>
+    <p>
+        NBA <em>最伟大</em>的球员
+    </p>
+</div>        
+<div class="p1 p2" style="color: red;" data-test="test data p1">
+    this is content of p1
+    <p data-test="test data">p sub of p1</p>
+    <section class="s1"><p class="s11"></p>
+</section></div>
+<form action="login" name="loginform" id="loginformId">
+   <p class="line" data-test="test data"><label for="username" name="username">usrname:</label><input type="text" name="usernameinput" form="loginformId" id="novalidating"></p>
+   <input id="fileInput" type="file" accept = "image/*" multiple>
+    <div class="imagecontainer">
+        <h2>image preview:</h2>
+    </div> 
+    <video src=""></video>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+</form>
+<div id="example">
+  <p id="p1" class="aaa bbb"/>
+  <p id="p2" class="aaa ccc"/>
+  <p id="p3" class="bbb ccc"/>
+</div>
+
+<select name="year" id="year">
+    <option value="0">--</option>
+    <option value="1999">1999</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+</select>年
+<select name="month" id="month">
+    <option value="0">--</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+</select>月
+<select name="date" id="date">
+    <option value="0">--</option>
+</select>日
+ 
+        <!-- Add your site or application content here -->
+        <script>
+        	// function Car(type,color) {
+        	// 	this.type=type;
+        	// 	this.color=color;
+        	// 	this.status="stop";
+        	// 	this.light ="off";
+        	// }
+        	// Car.prototype.start = function() {
+        	// 	this.status = "driving";
+        	// 	this.light = "on";
+        	// 	console.log(this.type + " is " +this.status);
+        	// }
+        	// Car.prototype.stop = function() {
+        	// 	this.status = "stop";
+        	// 	this.light = "off";
+        	// 	console.log(this.type + " is " + this.status);
+        	// }
+        	// var audi = new Car("audi","silver");
+        	// var benz = new Car('benz',"black");
+        	// var farrazi = new Car('farrari', "yellow");
+        	// audi.start(); 
+        	// console.dir(audi);
+        	// console.dir(Boolean);
+        	// (function() {
+        	// 	var a=0;
+        	// 	function b() {
+        	// 		a=1;
+        	// 		debugger;
+        	// 	}
+        	// 	b();
+        	// })();
+// var globali=1;
+// var globalj=2;
+// function addone(){
+// 	var sum=0;
+// 	return function(a){console.log(sum+a); debugger;};
+// }
+// var addexpression = addone();
+// addexpression(1);
+// addexpression(2);
+// addexpression(3); 
+// addexpression(4);
+
+// function add(a,b) {
+// 	return a+b;
+// }
+// // var myNumber = {
+// // 	value: 1, 
+// // 	doublefn: function(){
+// // 		console.dir(this);
+// // 		var that = this;
+// // 		var helper = function(){
+// // 			console.dir(this);
+// // 			that.value=add(that.value,that.value);
+// // 			console.log(that.value);
+// // 		}
+// // 		helper();
+// // 		}
+// // 	} //helper中的this实际上指向的是windows！！！要想访问其属性，可以使用that来缓存this指针（这和闭包很相似）
+// // myNumber.doublefn();
+// var myNumber = {
+// 	value: 1, 
+// 	doublefn: function(){
+// 		console.dir(this);
+// 		var that = this;
+// 		(function(a){
+// 			console.dir(this);
+// 			that.value=add(that.value,that.value);
+// 			console.log(that.value);
+// 			console.dir(arguments);
+// 			debugger;
+// 		})(5);
+// 		}
+// 	} //helper中的this实际上指向的是windows！！！要想访问其属性，可以使用that来缓存this指针（这和闭包很相似）
+// myNumber.doublefn();
+// // debugger;
+// var johnDoe = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     sayName: function () {
+//         return "My name is " + this.firstName + " " + this.lastName;
+//     }
+// };
+
+// var janeDoe = Object.create(johnDoe, {
+//     firstName: { value: "Jane" },
+//     greet: {
+//         value: function (person) {
+//             return "Hello, " + person.firstName;
+//         }
+//     }
+// });
+
+// var jimSmith = Object.create(janeDoe, {
+//     firstName: { value: "Jim" },
+//     lastName: { value: "Smith" }
+// });
+
+// //alert(johnDoe.sayName());
+//alert(janeDoe.sayName() + " " + janeDoe.greet(johnDoe));
+//alert(jimSmith.sayName() + " " + jimSmith.greet(janeDoe));
+
+// console.log(janeDoe.__proto__ === johnDoe);
+// console.log(jimSmith.__proto__ === janeDoe);
+
+// function Beverage(name, temperature) {
+//     this.name = name;
+//     this.temperature = temperature;
+// }
+
+// Beverage.prototype.drink = function () {
+//     console.log("I'm drinking " + this.name);
+// };
+
+// function Coffee(type) {
+//     Beverage.call(this, "coffee", "hot");
+//     this.type = type;
+// }
+
+// Coffee.prototype = Object.create(Beverage.prototype);
+// Coffee.prototype.sip = function () {
+//     console.log("Sipping some awesome " + this.type + " " + this.name);
+// };
+
+// var water = new Beverage("water", "cold");
+// var coffee = new Coffee("bold dark roast");
+// var arr=[1,2,3,4,5,6,7,8,9];
+// (function(thisarray) {
+//     var sum =0;
+//     thisarray.forEach(function(current,index,array) {
+//          sum += current;
+//     }) 
+//     console.log(sum);
+// })(arr);
+
+// var arr=[1,2];
+// (function(thisarray) {
+//     var sum =0;
+//     var index =0;
+//     while (thisarray[index]) {
+//         sum += thisarray[index];
+//         debugger;
+//         index++;
+//     }
+//     console.log(sum);
+// })(arr);
+
+// if (!window.JSON||!window.JSON.stringify) {
+//   window.JSON = {
+//     parse: function(sJSON) { return eval('(' + sJSON + ')'); },
+//     stringify: (function () {
+//       var toString = Object.prototype.toString;
+//       var isArray = Array.isArray || function (a) { return toString.call(a) === '[object Array]'; };
+//       var escMap = {'"': '\\"', '\\': '\\\\', '\b': '\\b', '\f': '\\f', '\n': '\\n', '\r': '\\r', '\t': '\\t'};
+//       var escFunc = function (m) { return escMap[m] || '\\u' + (m.charCodeAt(0) + 0x10000).toString(16).substr(1); };
+//       var escRE = /[\\"\u0000-\u001F\u2028\u2029]/g;
+//       return function stringify(value) {
+//         if (value == null) {
+//           return 'null';
+//         } else if (typeof value === 'number') {
+//           return isFinite(value) ? value.toString() : 'null';
+//         } else if (typeof value === 'boolean') {
+//           return value.toString();
+//         } else if (typeof value === 'object') {
+//           if (typeof value.toJSON === 'function') {
+//             return stringify(value.toJSON());
+//           } else if (isArray(value)) {
+//             var res = '[';
+//             for (var i = 0; i < value.length; i++)
+//               res += (i ? ', ' : '') + stringify(value[i]);
+//             return res + ']';
+//           } else if (toString.call(value) === '[object Object]') {
+//             var tmp = [];
+//             for (var k in value) {
+//               if (value.hasOwnProperty(k))
+//                 tmp.push(stringify(k) + ': ' + stringify(value[k]));
+//             }
+//             return '{' + tmp.join(', ') + '}';
+//           }
+//         }
+//         return '"' + value.toString().replace(escRE, escFunc) + '"';
+//       };
+//     })()
+//   };
+// }
+// // === '[object Array]'
+// var Person = function(first) {
+//     this.firstname =first;   
+// }
+// var p = new Person('zhang');
+// Function.call = (function(_super) {
+
+//     // return our new `join()` function
+//     return function() {
+//         console.log(this);
+//         return _super.apply(this, arguments);
+//     };         // Pass control back to the original join()
+//                // by using .apply on `_super`
+
+// })(Function.call);
+// var isArray = function (a) { return Object.prototype.toString.call(a); };
+// console.log(isArray([1,2,3]));
+    // function Car(logo) {
+    //         this.logo = logo || 'unknown branch';
+    //     }    
+    // Car.prototype = {
+    //     start: function() {
+    //         console.log('%s start',this.logo);
+    //     },
+    //     stop: function() {
+    //         console.log('%s stopped',this.logo);
+    //     },
+    //     run: function() {
+    //         console.log('%s running',this.logo);   
+    //     }
+    // }
+    // function LandRover(serialno) {
+    //     this.serialNumber =serialno;
+    // }
+    // LandRover.prototype = new Car('landrover');
+    // var landrover1 = new LandRover(1000);
+    // var landrover2 = new LandRover(1001);
+// ///////////////////////////
+// var arr=[1,2,3];
+
+// var obj={firstname: "zhang"};
+
+// var func = function() {
+
+//   console.log("this is a functon");
+
+// };
+
+// function Person(first,last) {
+
+//   this.firstname = first;
+
+//   this.lastname = last;
+
+// }
+
+// var person1 = new Person("zhang","san");
+
+// var d1 = 1;
+
+// var d2 = 1.2;
+
+// var b1 = true;
+
+// var str= "this is a string";
+//////////////////////////////////
+// console.log( "typeof null:" +String(typeof(null)));
+// console.log( "typeof undefined:" +String(typeof(undefined)));
+// console.log( "typeof d1:" +String(typeof(d1)));
+// console.log( "typeof d2:" +String(typeof(d2)));
+// console.log( "typeof b1:" +String(typeof(b1)));
+// console.log( "typeof str:" +String(typeof(str)));
+// console.log( "typeof arr:" +String(typeof(arr)));
+// console.log( "typeof obj:" +String(typeof(obj)));
+// console.log( "typeof func:" +String(typeof(func)));
+// console.log( "typeof Person:" +String(typeof(Person)));
+// console.log( "typeof person1:" +String(typeof(person1)));
+
+// console.log( "instanceof null for Null: " +String(null instanceof(Null)));
+// console.log( "instanceof undefined for Undfined: " +String(undefined instanceof(Undfined)));
+// console.log( "instanceof d1 for Number: " +String(d1 instanceof(Number)));
+// console.log( "instanceof d2 for Number: " +String(d2 instanceof(Number)));
+// console.log( "instanceof b1 for Boolean: " +String(b1 instanceof(Boolean)));
+// console.log( "instanceof str for String: " +String(str instanceof(String)));
+// console.log( "instanceof arr for Array: " +String(arr instanceof(Array)));
+// console.log( "instanceof obj for Object: " +String(obj instanceof(Object)));
+// console.log( "instanceof func for Function: " +String(func instanceof(Function)));
+// console.log( "instanceof Person for Function: " +String(Person instanceof(Function)));
+// console.log( "instanceof person1 for Person: " +String(person1 instanceof(Person)));
+// get
+// function getOwnPropertyNames(obj) {
+//     return Object.getOwnPropertyNames(obj); 
+// }
+// function getOwnFunctionNames(obj) {
+//     var properties = Object.getOwnPropertyNames(obj);
+//     var length = properties.length;
+//     var functions = [];
+
+//     for (var i = 0; i < length; i++) {
+//         var property = properties[i];
+//         if (property == "arguments" || property == "caller" ){continue;}
+//         if (typeof obj[property] === "function"){
+//             functions.push(property); 
+//         }
+//     }
+//     return functions;
+// }
+// var localfunc = function() {
+//     var localv = 10 ;
+//     return function() {
+        
+//     console.log(this);
+// (function() {
+//     console.log(this);
+// })();
+// } 
+// }
+// localfunc()();
+// function getOwn(obj) {
+//     return obj && obj.constructor && obj.constructor.toString().match(/function\s*([^(]*)/)[1];
+// }
+// // console.log( "get constructor type for null: " +String(getType(null)));
+// console.log( "get constructor type for undefined: " +String(getType(undefined)));
+// console.log( "get constructor type for d1: " +String(getType(d1)));
+// console.log( "get constructor type for d2: " +String(getType(d2)));
+// console.log( "get constructor type for b1: " +String(getType(b1)));
+// console.log( "get constructor type for str: " +String(getType(str)));
+// console.log( "get constructor type for arr: " +String(getType(arr)));
+// console.log( "get constructor type for obj: " +String(getType(obj)));
+// console.log( "get constructor type for func: " +String(getType(func)));
+// console.log( "get constructor type for Person: " +String(getType(Person)));
+// console.log( "get constructor type for person1: " +String(getType(person1)));
+// function Circle(radius) {
+//     var _radius = radius;
+//     this.getRadius = function() {
+//         return _radius;
+//     }
+// }
+// Circle.prototype = {
+//     zc: function() {
+//         return parseFloat((this.getRadius()*2*Math.PI).toFixed(2))
+//     },
+//     mj: function() {
+//         return parseFloat((this.getRadius()* this.getRadius() *Math.PI).toFixed(2));
+//     },
+//     constructor: Circle
+// };
+// var circle1 = new Circle(5);
+// console.log("半径为"+ circle1.getRadius() + "的圆周长为:" + circle1.zc());
+// console.log("半径为"+ circle1.getRadius() + "的圆面积为:" + circle1.mj());
+// 
+// var total = 0,
+//     score = 'B';
+// switch(score){
+//   case 'A':
+//     total += 30;
+//     break;
+//   case 'B':
+//     total += 20;
+//   case 'C':
+//     total += 10;
+//     break;
+//   default:
+//     total+= 5;
+// }
+// function random() {
+//     return Math.floor(Math.random()*1000);
+// }
+// var number = random();
+// console.log(number);
+// function fibonacci(n) {
+//     if (typeof(n)!="number") return "not a number";
+//     if (n>=2){
+//         return fibonacci(n-1)+ fibonacci(n-2);
+//     }
+//     else if (n==1) {return 1;}
+//     else if (n==0){return 0;}
+//     else if (n<0){return NaN;}
+// }    
+// console.log(fibonacci(8));
+// if (!Function.prototype.bind){
+//     Function.prototype.bind= function(obj){
+//         var _self = this, args = arguments;//这里有闭包的概念
+//         return function() {
+//         _self.apply(obj, Array.prototype.slice.call(args, 1));
+//         }
+//     }
+// }
+// if(!Object.create){
+//     Object.create = function(obj) {
+//         function Bridge() {}
+//         Bridge.prototype = obj;
+//         return new Bridge();
+//     }
+// }
+// function type(obj) {
+//     return obj && obj.constructor && obj.constructor.toString().match(/function\s*([^(]*)/)[1].toLowerCase();
+// }
+// console.log(type(1));
+// console.log(type(new Number(1)));
+// console.log(type("abc"));
+// console.log(type(new String("abc")));
+// console.log(type(true));
+// console.log(type(undefined));
+// console.log(type(null));
+// console.log(type({}));
+// console.log(type([]));
+// console.log(type(new Date));
+// console.log(type(/\d/));
+// console.log(type(function(){}));
+// function escapeHTML(htmlStr) {
+//   var escapeTable = [
+//     ['&','&amp;'],
+//     ['<','&lt;'],
+//     ['>','&gt;'],
+//     ['"','&quot;']
+//   ];
+//   for (var i = 0; i < escapeTable.length; i++) {
+//     var regex = new RegExp(escapeTable[i][0],'g');
+//     htmlStr =htmlStr.replace(regex,escapeTable[i][1]);
+//   };
+//   return htmlStr;    
+// }
+// function escapeHTML(htmlStr) {
+//     return htmlStr.replace(/[&<>"']/g,function(matched) {
+//         switch (matched) {
+//             case '&':
+//                 return '&amp';
+//                 break;
+//             case '<':
+//                 return '&lt;';
+//                 break;
+//             case '>':
+//                 return '&gt;';
+//                 break;
+//             case '"':
+//                 return '&quot;';
+//                 break;                                
+//             default:
+//                 return matched;
+//                 break;
+//         }
+//     });
+// }
+// function args2Array(arguments) {
+//     return Array.prototype.slice.apply(arguments);
+// }
+// function add(i,j) {
+//     var args = args2Array(arguments);
+//     console.dir(args);
+//     // args.forEach(function (item) {
+//     //     console.log("arguments are"+item);
+//     // })
+// }
+// add(1,2,3);
+// var factorial = (function() {
+//     var memo = [1];
+//     var count = 0;
+//     var fac = function(i) {
+//         count++;
+//         var result = memo[i];
+//         if(typeof result === 'number'){
+//             console.log('调用次数：' +count);
+//             return result;
+//         }
+//         result = i*fac(i-1);
+//         memo[i] =result;
+//         return result;
+//     }
+//     return fac;
+// })();   
+// for (var i = 0; i <10; i++) {
+//     console.log(factorial(i));
+// };
+// function add(value) {
+//     var helper = function(next) {
+//         console.log("value is: "+ value + "--line 481" );
+//         value = typeof(value)==="undefined"?next:value+next;
+//         console.log("value is: " +value + "--line 483");
+//         return helper;
+//     }
+//     helper.valueOf = function() {
+//         console.log("valueOf is called at 488");
+//         return value;
+//     }
+//     return helper;
+// }   
+// console.log(add(2)(3)(5)(7));
+// /////////////////
+// var x = 10;
+// function foo() {
+//     alert(x);
+// }
+// function bar() {
+//     var x=20;
+//     foo();
+// }
+// bar();
+// ////////////////
+// var foo = "abc";
+// with({
+//     foo: "bar"
+// }){
+//     function f() {//函数声明方式定义的函数作用域只和函数定义的位置有关
+//         alert(foo);
+//     };//函数表达式的作用域和运行时的环境有关
+//     (function() {
+//         alert(foo + ' 512行');
+//     })();
+// }
+// f();
+// 上面执行顺序是iief,和f()!!!
+// 
+// ////////////////////////
+// function todo() {
+//     var a = test = 'some value';
+//     console.log(a);
+// }
+// todo();
+// console.log(test);
+// ////////////
+// function type(obj) {
+//     var _type = typeof obj;
+//     switch (_type) {
+//         case "string":
+//         case "boolean":
+//         case "number":
+//         case "function":
+//         return _type;
+//         default:
+//             // statements_def
+//             break;
+//     }
+//     return obj && obj.constructor && obj.constructor.toString().match(/function\s*([^(]*)/)[1].toLowerCase();
+   
+// }
+// ////////////////////////
+// function search(arr,dst) {
+//     var from = 0, to = arr.length-1;
+//     var matched = -1;
+//     function searchBin(from, to , dst) {
+//         if (arr[Math.floor((from+to)/2)]==dst) {
+//             console.log(Math.floor((from+to)/2));
+//             matched = Math.floor((from+to)/2);
+//         }else if(to == from +1){
+//             console.log("to is:"+to+"from is:"+from);
+//             if((arr[from])==dst){matched = from;}
+//             if((arr[to]==dst)) {console.log("matched with to" + to); matched = to;}
+//             else {return 111;}
+//         }
+//         else if(from>to){
+//             matched = -111;
+//         }
+//         else if((arr[Math.floor((from+to)/2)])<dst){
+//             from = Math.floor((from+to)/2);
+//             console.log("from to are: " + from +', ' + to);
+//             searchBin(from,to,dst);
+//         }else if((arr[Math.floor((from+to)/2)])>dst){
+//             to = Math.floor((from+to)/2);
+//             console.log("from to are: " + from +', ' + to);
+//             searchBin(from,to,dst);
+//         }
+//     }
+//     searchBin(from,to,dst);    
+//     return matched;
+// }
+// var arr = [1, 2, 4, 6, 7, 9, 19,20, 30, 40, 45, 47,50];
+// console.log(search (arr,52));
+// function formatDate(date,pattern) {
+//     if (pattern.match("yyyy-MM-dd HH:mm:ss")){
+//         return date.getFullYear()+'-'+pad2((date.getMonth()+1))+'-'+(date.getDay())+ ' '+pad2(date.getHours())+':'+pad2(date.getMinutes())+':'+pad2(date.getSeconds());
+//     }else if(pattern.match("yyyy-MM-dd HH")){
+//         return date.getFullYear()+'-'+pad2((date.getMonth()+1))+'-'+pad2(date.getDay())+ ' '+pad2(date.getHours());
+//     }else if(pattern.match("yyyy-MM-dd")){
+//         return date.getFullYear()+'-'+pad2((date.getMonth()+1))+'-'+pad2(date.getDay());
+//     }else if(pattern.match("yyyy")){
+//         return date.getFullYear();
+//     }else{
+//         return "Not supported format";
+//     }
+//     function pad2(number) {
+//         return (number < 10 ? '0' : '') + number;
+//     }
+// }
+// var date = new Date(2001, 8, 11, 8, 26, 8);
+// var formatted = formatDate(date, "yyyy"); 
+// function search(arr,dst) {
+//     var from = 0, to = arr.length-1;
+//     function searchBin(from, to , dst) {
+//         if (arr[Math.floor((from+to)/2)]==dst) {
+//             return Math.floor((from+to)/2);
+//         }else if(from>to){
+//             console.log("not found");
+//             return -1;
+//         }
+//         else if((arr[Math.floor((from+to)/2)])<dst){
+//             from = Math.floor((from+to)/2);
+//             searchBin(from,to,dst);
+//         }else if((arr[Math.floor((from+to)/2)])>dst){
+//             to = Math.floor((from+to)/2);
+//             searchBin(from,to,dst);
+//         }
+//     }
+//     searchBin(from,to,dst);    
+// }
+// var arr = [1, 2, 4, 6, 7, 9, 19,20, 30, 40, 45, 47];
+// search(arr,45);
+// 
+/**
+ * retrive the parameter object's type via obj.constructor
+ * with small hack with obj && obj.constructor prefixed
+ * @param  {Object or undefined or null} obj object to be type checked
+ * @return {string} lowercase constructor function name or null/undefined
+ */
+// function getType(obj) {
+//     var _type = typeof obj;
+//     switch (_type) {
+//         case "string":
+//         case "boolean":
+//         case "number":
+//         case "function":
+//         return _type;
+//         default:
+//             // statements_def
+//             break;
+//     }
+//     return obj && obj.constructor && obj.constructor.toString().match(/function\s*([^(]*)/)[1].toLowerCase();
+// }
+// /**
+//  * retrieve the own property names for given object
+//  * @param  {Object} obj the object to be inspected
+//  * @return {Array}     Array with string of own property names for the obj
+//  */
+// function getOwnPropertyNames(obj) {
+//     return Object.getOwnPropertyNames(obj); 
+// }
+// /**
+//  * retrieve the given object's own function names
+//  * @param  {Object} obj object which is to be inspected
+//  * @return {Array}     array filled with obj's own function names;
+//  *                     the arguments/caller are skipped due to strict mode exception
+//  */
+// function getOwnFunctionNames(obj) {
+//     var properties = Object.getOwnPropertyNames(obj);
+//     var length = properties.length;
+//     var functions = [];
+
+//     for (var i = 0; i < length; i++) {
+//         var property = properties[i];
+//         if (property == "arguments" || property == "caller" || property == "constructor"){continue;}
+//         if (typeof obj[property] === "function" ){ //
+//             functions.push(property); 
+//         }
+//     }
+//     return functions;
+// }
+// /**
+//  * escape the HTML strings &<>" are changed
+//  * @param  {String} htmlStr html string to be escaped
+//  * @return {String}         escaped html string
+//  */
+// function escapeHTML(htmlStr) {
+//     return htmlStr.replace(/[&<>"']/g,function(matched) {
+//         switch (matched) {
+//             case '&':
+//                 return '&amp';
+//                 break;
+//             case '<':
+//                 return '&lt;';
+//                 break;
+//             case '>':
+//                 return '&gt;';
+//                 break;
+//             case '"':
+//                 return '&quot;';
+//                 break;                                
+//             default:
+//                 return matched;
+//                 break;
+//         }
+//     });
+// }
+// /**
+//  * convert Array-like arguments to Array
+//  * @param  {arguments} arguments the arguments for function
+//  * @return {Array}           the array representing arguments
+//  */
+// function args2Array(arguments) {
+//     return Array.prototype.slice.apply(arguments);
+// }
+    // var p1 = document.getElementsByClassName('p1')[0];
+    // var s1 = document.getElementsByClassName('s1')[0];
+    // var s11 = document.getElementsByClassName('s11')[0];
+    // var handler = function(e) {
+    //     console.log(e.type+ ' for ' + e.target);
+    // }
+    // // p1.addEventListener('mouseenter', handler);
+    // // p1.addEventListener('mouseleave', handler);
+    // p1.addEventListener('mouseover', handler);
+    // p1.addEventListener('mouseout', handler);
+    
+    // // s1.addEventListener('mouseenter', handler);
+    // // s1.addEventListener('mouseleave', handler);
+    // s1.addEventListener('mouseover', handler);
+    // s1.addEventListener('mouseout', handler);
+    // s11.addEventListener('mouseover', handler);
+    // s11.addEventListener('mouseout', handler);
+// ////////////////////////////
+// function setCookie (name, value, expires, path, domain, secure) {
+//     var cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+//     if (expires)
+//         cookie += '; expires=' + expires.toGMTString();
+//     if (path)
+//         cookie += '; path=' + path;
+//     if (domain)
+//         cookie += '; domain=' + domain;
+//     if (secure)
+//         cookie += '; secure=' + secure;
+//     document.cookie = cookie;
+// }
+// function getcookie () {
+//     var cookie = {};
+//     var all = document.cookie;
+//     if (all === '')
+//         return cookie;
+//     var list = all.split('; ');
+//     for (var i = 0; i < list.length; i++) {
+//         var item = list[i];
+//         var p = item.indexOf('=');
+//         var name = item.substring(0, p);
+//         name = decodeURIComponent(name);
+//         var value = item.substring(p + 1);
+//         value = decodeURIComponent(value);
+//         cookie[name] = value;
+//     }
+//     return cookie;
+// }
+// function removeCookie (name, path, domain) {
+//     document.cookie = name + '='
+//     + '; path=' + path
+//     + '; domain=' + domain
+//     + '; max-age=0';
+// }
+
+// /////////////////jshelper/////////
+/**
+ * retrive the parameter object's type via obj.constructor
+ * with small hack with obj && obj.constructor prefixed
+ * @param  {Object or undefined or null} obj object to be type checked
+ * @return {string} lowercase constructor function name or null/undefined
+ */
+function getType(obj) {
+    var _type = typeof obj;
+    var result;
+    switch (_type) {
+        case "string":
+        case "boolean":
+        case "number":
+        case "function":
+        return _type;
+        default:
+            // statements_def
+            break;
+    }
+    result = obj && obj.constructor && obj.constructor.toString();
+    return result && (result.match(/object ([^\[\]]*)/)?result.match(/object ([^\[\]]*)/)[1].toLowerCase():undefined || result.match(/function\s*([^(]*)/)?result.match(/function\s*([^(]*)/)[1].toLowerCase():undefined);
+}
+/**
+ * retrieve the own property names for given object
+ * @param  {Object} obj the object to be inspected
+ * @return {Array}     Array with string of own property names for the obj
+ */
+function getOwnPropertyNames(obj) {
+    return Object.getOwnPropertyNames(obj); 
+}
+/**
+ * retrieve the given object's own function names
+ * @param  {Object} obj object which is to be inspected
+ * @return {Array}     array filled with obj's own function names;
+ *                     the arguments/caller are skipped due to strict mode exception
+ */
+function getOwnFunctionNames(obj) {
+    var properties = Object.getOwnPropertyNames(obj);
+    var length = properties.length;
+    var functions = [];
+
+    for (var i = 0; i < length; i++) {
+        var property = properties[i];
+        if (property == "arguments" || property == "caller" ){continue;}
+        try{
+          if (typeof obj[property] === "function"){
+              functions.push(property); 
+          }
+        }catch(e){
+          console.log(property+" for "+getType(obj));
+        }
+    }
+    return functions;
+}
+/**
+ * escape the HTML strings &<>" are changed
+ * @param  {String} htmlStr html string to be escaped
+ * @return {String}         escaped html string
+ */
+function escapeHTML(htmlStr) {
+    return htmlStr.replace(/[&<>"']/g,function(matched) {
+        switch (matched) {
+            case '&':
+                return '&amp';
+                break;
+            case '<':
+                return '&lt;';
+                break;
+            case '>':
+                return '&gt;';
+                break;
+            case '"':
+                return '&quot;';
+                break;                                
+            default:
+                return matched;
+                break;
+        }
+    });
+}
+/**
+ * convert Array-like arguments to Array
+ * @param  {arguments} arguments the arguments for function
+ * @return {Array}           the array representing arguments
+ */
+function args2Array(arguments) {
+    return Array.prototype.slice.apply(arguments);
+}
+/**
+ * property comes from which __proto__ in the prototype chain
+ * @param  {Object} obj  the object to inspect
+ * @param  {property} prop the property to check
+ * @return {Object}      property comes from which __proto__
+ *                       If not found, retun "not found"
+ */
+function propInfo(obj,prop) {
+  if(obj.hasOwnProperty(prop)){
+    return {propName: prop ,belongsTo: getType(obj) };
+  }else if(obj.__proto__){
+    return propInfo(obj.__proto__, prop);
+  }else{
+    return "not found";
+  }
+}
+/**
+ * print out prototype chain for a given object
+ * @param  {Object} obj the object to inspect
+ * @return {Array}     all the Constructor name of the prototypes
+ */
+function protoChainInfo(obj) {
+  var protos = [];
+  (function getProto(object) {
+    var proto = object && Object.getPrototypeOf(object);
+    if (proto) {
+      protos.push(getType(proto));  
+      getProto(proto);
+    }else return;
+  })(obj)
+  return protos;
+}
+/**
+ * print out detail prototype chain for a given object
+ * @param  {Object} obj the object to inspect
+ * @return {Array}     all the Constructor name of the prototypes
+ *                     and its properties
+ */
+function protoChainInfoDetailAll(obj) {
+  var protos = [];
+  (function getProto(object) {
+    var proto = object && Object.getPrototypeOf(object);
+    if (proto) {
+      protos.push({protoConstructor: getType(proto),protoOwnFunctions: getOwnPropertyNames(proto)});  
+      getProto(proto);
+    }else return;    
+  })(obj)
+  return protos;  
+}
+/**
+ * print out all functions in the prototype chain for a given object
+ * @param  {Object} obj the object to inspect
+ * @return {Array}     all the functions in the proto chain
+ */
+function protoChainInfoDetail(obj) {
+  var protos = [];
+  (function getProto(object) {
+    var proto = object && Object.getPrototypeOf(object);
+    if (proto) {
+      protos.push({protoConstructor: getType(proto),protoOwnFunctions: getOwnFunctionNames(proto)});  
+      getProto(proto);
+    }else return;
+      
+  })(obj)
+
+  return protos;
+  
+}
+var file = document.getElementById("fileInput");
+var imagecontainer = document.getElementsByClassName("imagecontainer");
+// var reader  = new FileReader();
+// file.addEventListener('change', function(event) {
+//     console.dir(event);
+//     var files= Array.prototype.slice.call(event.target.files,0);
+//     files.forEach( function(element, index) {
+//         // file2dataurl(element,function(url) {
+//             var image = new Image();
+//             image.height = 100;
+//             image.width = 100;
+//             image.src = window.URL.createObjectURL(element);
+//             imagecontainer[0].appendChild(image);
+//         // })
+//     });
+// })
+
+
+
+var date=new Date(2001,8,11,8,26,8);
+function formaDate(date,pattern){
+var toDouble=function(n){
+return n<10?'0'+n:n;
+};
+var reg=/([yY]{4}|MM|[dD]{2}|[hH]{2}|mm|[sS]{2})/g;
+var str=pattern.replace(reg,function(item){
+if(item=='MM')
+return toDouble(date.getMonth()+1);
+item=item.toLowerCase();
+switch (item){
+case 'yyyy':
+return date.getFullYear();
+case 'dd':
+return toDouble(date.getDate());
+case 'hh':
+return toDouble(date.getHours());
+case 'mm':
+return toDouble(date.getMinutes());
+case 'ss':
+return toDouble(date.getSeconds());
+}
+});
+return str;
+}
+console.log(formaDate(date,'yyYy-MM-dD hh:mm:ss'));
+
+
+// children 获取子元素的IE兼容代码
+function getChildren(el) {
+    var htmlclasses = document.getElementsByTagName('html')[0].className;
+    var isIE8 ;
+    var children = [];
+    for (var i = 0; i < htmlclasses.length; i++) {
+        if ('ie8' == htmlclasses[i] || 'ie7' == htmlclasses[i])      
+        {
+            isIE8 = true;
+            break;
+        }   
+    };
+    if (isIE8){
+        var childNodes = element.childNodes;
+        i = childNodes.length;
+
+        while (i--) {
+            if (childNodes[i].nodeType == 1) {
+                children.unshift(childNodes[i]);
+            }
+        }
+
+        return children;
+    }
+    else{
+        return el.children;
+    }
+}
+
+// dataset的IE兼容
+(function() {
+    var div = document.createElement('div');
+    if (div.dataset == undefined) {
+    Object.defineProperty(Element.prototype, 'dataset', {     
+        get: function() {    
+            var result = {}, 
+                attr = null, 
+                attrName = ''; 
+            for (var i = 0; i < this.attributes.length; i++) { 
+                attr = this.attributes[i]; 
+                if ((attrName = attr.name).match(/^data-.*/)) { 
+                    attrName = attrName.replace(/^data-/g,'');
+                    result[attrName] = attr.value;
+                }
+            }
+            return result;
+        }
+    });
+}
+})();
+// getComputedStyle兼容
+// function getComputedStyle(ele) {
+//     if(ele.currentStyle) {
+//      return ele.currentStyle;
+//     } else {
+//      return window.getComputedStyle(ele);
+//     }
+//  }
+
+// getStyle函数
+// var cssPropertyValue = getStyle (element, cssPropertyName)；
+function getStyle(el,prop) {
+    if( el instanceof HTMLElement)
+    {   
+        return getComputedStyle(el)[prop];
+    }else{
+        console.log("para is not a HTMLElement");
+        return undefined;
+    }
+    
+}
+// (function() {
+//   var canvas = document.getElementById("myCanvas");
+//     var cxt = canvas.getContext("2d");
+//     cxt.beginPath();
+//     cxt.arc(150, 150, 100, 0, Math.PI*2,true);
+//     cxt.strokeStyle = "#4d4e53";
+//     cxt.fillStyle = "#6a83ff";
+//     cxt.stroke();
+//     cxt.fill();
+//     cxt.closePath();  
+// })();
+// (function() {
+//     var w = window.open("http://www.163.com","subwindow","width=400, height=350, status=yes, toolbar=yes, resizable=yes")
+//     setTimeout(function() {
+//         w.close();
+//     }, 5000);
+// })();
+// selection cursor set by program:
+function selection(input,start,end){
+    input.focus();
+    input.setSelectionRange(start,end);
+}
+// 考试 getElementsByClassName
+// var getElementsByClassName = (function() {
+//     var idAllocator = 10000;
+//     // 格式化输入字符串，从而形成.aaa.bbb的形式
+//     function formatNamesToSelectors(localnames) {
+//         return localnames? '.'+localnames.split(' ').join('.') : undefined ;
+//     }
+//     // 兼容性考虑：ie低版本不支持element.querySelectorAll,使用document.querySelectorAll加id限制条件
+//     function qsaWorkerShim(element, selectors) {
+//         var needsID = element.id === "";
+//         if (needsID) {
+//             ++idAllocator;
+//             element.id = "__qsa" + idAllocator;
+//         }
+//         try {
+//             return document.querySelectorAll("#" + element.id + " " + formatNamesToSelectors(selectors));
+//         }
+//         finally {
+//             if (needsID) {
+//                 element.id = "";
+//             }
+//         }
+//     }
+//     // 高版本直接支持element.querySelectorAll
+//     function qsaWorkerWrap(element, selectors) {
+//         return element.querySelectorAll(formatNamesToSelectors(selectors));
+//     }
+
+//     // Return the one this browser wants to use
+//     return document.createElement('div').querySelectorAll ? qsaWorkerWrap : qsaWorkerShim;
+// })();
+function getElementsByClassName(root,className) {    
+    // helper函数，判断a数组是否是b数组的子集
+    function isAinB(a,b) {
+        for (var i = 0; i < a.length; i++) {
+            
+            // 对a[i]判断
+            for (var j = 0; j < b.length; j++) {
+                if (a[i].trim() == b[j].trim()){
+                    // a[i] in b 则继续判断下一个a[i++]是否属于b
+                    break;
+                }
+            };
+            if (j == b.length){
+                // a[i] not in b
+                return false;
+            }
+        };
+        return true;
+    }
+//root：父节点，tagName：该节点的标签名。 这两个参数均可有可无
+    if(root){
+        root=typeof root=="string" ? document.getElementById(root) : root;   
+    }else{
+        root=document.body;
+    }
+    var tagName=tagName||"*";                                    
+    if (document.getElementsByClassName) {                    //如果浏览器支持getElementsByClassName，就直接的用
+        return root.getElementsByClassName(className);
+    }else { 
+        var tag= root.getElementsByTagName(tagName);    //获取指定元素
+        var tagAll = [];                                    //用于存储符合条件的元素
+        for (var i = 0; i < tag.length; i++) {                //遍历获得的元素
+            var childelemClasses = tag[i].className.split(' ');//childelemClasses包含了待查元素的class集合数组,
+                    //需要判断classnames数组是childelemClasses数组的子集
+            var classnames = className.split(' ');
+            if (isAinB(classnames,childelemClasses)){
+                tagAll.push(tag[i]);
+            }
+            
+        }
+        return tagAll;
+    }
+}
+    
+// fadeout(element) JS淡出动画实现
+function fadeout(element) {
+    // 10ms一帧
+    var opacitystep = 1/(1000/10);
+    var currentopacity;
+    var timerId = setInterval(function() {
+        currentopacity = Number(getComputedStyle(p1).opacity);
+        if ((currentopacity - opacitystep)<0) {
+            element.style.opacity = 0;   
+            clearInterval(timerId);
+            return;
+        };
+        element.style.opacity = currentopacity - opacitystep;
+    }, 10);  
+}
+function byid(id) {
+    return document.getElementById(id);
+}
+function byclass(classname) {
+    return document.getElementsByClassName(classname);
+}
+function bytag(tagname) {
+    return document.getElementsByTagName(tagname);
+}
+
+// var year,month,day;
+// var eyear = document.getElementById("year");
+// var emonth = document.getElementById("month");
+// var eday = document.getElementById("date");
+// function addEvent(elem,type,fn) {
+//     var div = document.createElement('div');
+//     if (div.attachEvent){
+//         elem.attachEvent("on"+type,fn);
+//     }else if(div.addEventListener){
+//         elem.addEventListener(type, fn);
+//     }else{
+//         console.log("error happens during add event");
+//     }
+// }
+// addEvent(eyear,"change",function(ev) {
+//     if (eyear.value == 0){
+//         emonth.value = 0;
+//         eday.value = 0;
+//         removeMonthOptions();
+//         removeDayOptions();
+//         emonth.options.add(new Option("--","0"));
+//         eday.options.add(new Option("--","0"));
+//     }else{
+
+//         removeDayOptions();
+//         eday.options.add(new Option("--","0"));
+//         var daysinmonth = getDayOfYM(Number(eyear.value),Number(emonth.value));
+//         for (var i = 0; i < daysinmonth; i++) {
+//             eday.options.add(new Option(i+1, String(i)));
+//         };
+//         if(emonth.options.length ==1){
+//             for (var i = 0; i < 12; i++) {
+//                 emonth.options.add(new Option(i+1,String(i+1)));
+//             };
+//         }
+//     }
+// });
+// addEvent(emonth,"change",function(ev) {
+//     if (eyear.value == 0){
+//         emonth.value = 0;
+//         eday.value = 0;
+//         removeMonthOptions();
+//         removeDayOptions();
+//         emonth.options.add(new Option("--","0"));
+//         eday.options.add(new Option("--","0"));
+//     } else if(emonth.value == 0){
+//         removeDayOptions();
+//         eday.options.add(new Option("--","0"));
+//     } else{
+//         removeDayOptions();
+//         eday.options.add(new Option("--","0"));
+//         var daysinmonth = getDayOfYM(Number(eyear.value),Number(emonth.value));
+//         for (var i = 0; i < daysinmonth; i++) {
+//             eday.options.add(new Option(i+1, String(i)));
+//         };
+//     }
+// });
+// addEvent(eday,"change",function(ev) {
+//     console.log(ev);
+// });
+// function getDayOfYM(year,month) {
+//     if ((year == 0)||(month == 0)) return 0;
+//     var date = new Date(year,month,0);
+//     return date.getDate();    
+// }
+// function removeMonthOptions() {
+//     var monthoptionslen = emonth.options.length;
+//     for (i = 0; i<monthoptionslen;i++){
+//         emonth.options.remove(emonth.options[i]);
+//     }
+// }
+// function removeDayOptions() {
+//     var dayoptionslength = eday.options.length;
+//     for (i = 0; i<dayoptionslength;i++){
+//         eday.options.remove(eday.options[i]);
+//     }
+// }
+
+// function getElementsByClassName(element, clazz){
+//     var elem = document.getElementById(element);
+//     if(elem.getElementsByClassName){
+//         return elem.getElementsByClassName(clazz);
+//     } else {
+//         var list = elem.getElementsByTagName('*'), result = [];
+//         for(var i = 0, l = list.length; i < l; i++){
+//             if( (' ' + list[i].className + ' ').indexOf(' ' + clazz + ' ') != -1 ){
+//                 result.push(list[i]);
+//             }
+//         }
+         
+//         return result;
+//     }
+// }
+//先删除月和日的所有节点，再分别添加一个value为0的节点。
+//             (function() {
+//                 if(month.childNodes.length > 1){
+//                     for (var i=month.childNodes.length-1;i>=0;i--) {
+//                         month.removeChild(month.childNodes[i]);
+//                     }
+//                     var element = document.createElement("option");
+//                     element.setAttribute("value","0");
+//                     element.textContent = "--";
+//                     month.appendChild(element);
+//                 }
+//                 if(date.childNodes.length > 1){
+//                     for (var i=date.childNodes.length-1;i>=0;i--) {
+//                         date.removeChild(date.childNodes[i]);
+//                     }
+//                     var element = document.createElement("option");
+//                     element.setAttribute("value","0");
+//                     element.textContent = "--";
+//                     date.appendChild(element);
+//                 }
+//             })();
+//             year.addEventListener(
+//                 'change',
+//                 function(event) {
+//                     if(year.value == 0){
+//                         month.value = 0;                  
+//                         date.value = 0;
+//                         if(month.childNodes.length > 1){
+//                             for (var i=month.childNodes.length-1;i>=0;i--) {
+//                                 month.removeChild(month.childNodes[i]);
+//                             }
+//                             var element = document.createElement("option");
+//                             element.setAttribute("value","0");
+//                             element.textContent = "--";
+//                             month.appendChild(element);
+//                         }
+//                         if(date.childNodes.length > 1){
+//                             for (var i=date.childNodes.length-1;i>=0;i--) {
+//                                 date.removeChild(date.childNodes[i]);
+//                             }
+//                             var element = document.createElement("option");
+//                             element.setAttribute("value","0");
+//                             element.textContent = "--";
+//                             date.appendChild(element);
+//                         }
+//                     }
+//                     if(year.value > 0 && month.childNodes.length == 1){
+//                         for (var i=1;i<=12;i++) {
+//                             var element = document.createElement("option");
+//                             element.setAttribute("value",i);
+//                             element.textContent = i;
+//                             month.appendChild(element);
+//                         }                   
+//                     }
+//                 }
+//             );
+//             month.addEventListener(
+//                 'change',
+//                 function(event) {
+//                     for (var i=date.childNodes.length-1;i>=0;i--) {
+//                         date.removeChild(date.childNodes[i]);
+//                     }
+//                     var element = document.createElement("option");
+//                     element.setAttribute("value","0");
+//                     element.textContent = "--";
+//                     date.appendChild(element);
+//                     date.value = 0;
+//                     if(month.value > 0 && date.childNodes.length == 1){
+//                         var max=0;
+//                         if(year.value%4==0&&month.value==2){
+//                             max=29;
+//                         }
+//                         else{
+//                             switch (month.value){
+//                                 case "1":max=31;break;
+//                                 case "3":max=31;break;
+//                                 case "5":max=31;break;
+//                                 case "7":max=31;break;
+//                                 case "8":max=31;break;
+//                                 case "10":max=31;break;
+//                                 case "12":max=31;break;                            
+//                                 case "4":max=30;break;
+//                                 case "6":max=30;break;
+//                                 case "9":max=30;break;
+//                                 case "11":max=30;break;
+//                                 case "2":max=28;break;
+//                             }
+//                         }
+//                         for (var i=1;i<=max;i++) {
+//                             var element = document.createElement("option");
+//                             element.setAttribute("value",i);
+//                             element.textContent = i;
+//                             date.appendChild(element);
+//                         }                   
+//                     }
+//                 }
+//             );
+// // attach event handler to eyear,emonth,eday
+
+        </script>
+
+    </body>
+</html>
